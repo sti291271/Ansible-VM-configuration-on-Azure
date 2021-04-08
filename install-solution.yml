@@ -1,0 +1,8 @@
+---
+- name: User creation and ssh generate keys
+  hosts: localhost
+  vars_file: ./vars/main.yml
+
+  roles:
+    - user_creation
+    - ssh-keys
