@@ -1,7 +1,8 @@
 ---
-- hosts: localhost
+- name: Manage credentials for Automation
+  hosts: localhost
   become: true
-  vars_file: ./vars/main.yml
+#  vars_file: ./vars/main.yml
 
   roles:
     - user_creation
