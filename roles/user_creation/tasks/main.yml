@@ -8,7 +8,7 @@
     
 - name: Add ansible User
   user:
-    name: ansible
+    name: "{{ automation_user_name }}"
     create_home: true
     password: "testingpass123"
     update_password: on_create
