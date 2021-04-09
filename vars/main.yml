@@ -1,4 +1,4 @@
 ---
 # variables to apply to this run
 
-user_name: ansible
+automation_user_name:: ansible
