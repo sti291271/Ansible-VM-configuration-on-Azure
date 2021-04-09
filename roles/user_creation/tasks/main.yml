@@ -1,0 +1,15 @@
+---
+# Group & Users creation for automation Team
+
+- name: Add automation Group
+  group:
+    name: automation
+    state: present
+    
+- name: Add ansible User
+  user:
+    name: ansible
+    create_home: true
+    password: "testingpass123"
+    update_password: on_create
+    group: automation
