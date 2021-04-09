@@ -10,6 +10,6 @@
   user:
     name: "{{ automation_user }}"
     create_home: true
-    password: "{{ 'automation_password' | password_hash('sha512') }}"
+    password: "{{ 'automation_user_name' | password_hash('sha512') }}"
     update_password: on_create
     group: automation
