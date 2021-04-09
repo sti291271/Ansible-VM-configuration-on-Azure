@@ -10,6 +10,6 @@
   user:
     name: "ansible" #"{{ automation_user_name }}"
     create_home: true
-    password: "testingpass123"
+    password: "{{ 'automation_password' | password_hash('sha512') }}" #"testingpass123"
     update_password: on_create
     group: automation
