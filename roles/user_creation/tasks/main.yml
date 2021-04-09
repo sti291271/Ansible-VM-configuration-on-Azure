@@ -10,6 +10,7 @@
   user:
     name: "{{ automation_user }}"
     create_home: true
-    password: "{{ 'automation_user_name' | password_hash('sha512') }}"
-    update_password: on_create
+    shell: /sbin/nologin
+    #password: "{{ 'automation_user_name' | password_hash('sha512') }}"
+    #update_password: on_create
     group: automation
