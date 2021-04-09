@@ -1,4 +1,5 @@
 ---
 # variables to apply to this run
 
-automation_user_name:: ansible
+Vault password: 
+automation_user_name:: Advanzia2021.
