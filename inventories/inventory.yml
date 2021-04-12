@@ -1,13 +1,17 @@
 ---
-config_vm:
+all:
   hosts:
-    vmcloud2: myansiblevm
-  vars:
-    automation: true
-  
-target_vm:
-  hosts:
-    vmcloud1: mytargetvm
-  vars:
-    ansible_user: ansible
-    automation: false
+    automation:
+  children:
+    config_vm:
+      hosts:
+        ansible-vm.westeurope.cloudapp.azure.com:
+      vars:
+        automation: true
+    target_vm:
+      hosts:
+        target-vm.westeurope.cloudapp.azure.com:
+      vars:
+        ansible_user: ansible
+        automation: false
+      
