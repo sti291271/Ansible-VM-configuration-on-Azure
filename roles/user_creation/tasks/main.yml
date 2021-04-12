@@ -10,8 +10,8 @@
   user:
     name: "{{ automation_user }}"
     create_home: true
-    shell: /sbin/nologin
+ #   shell: /sbin/nologin
     generate_ssh_key: true
-    #password: "{{ 'automation_user_name' | password_hash('sha512') }}"
-    #update_password: on_create
+    password: "{{ 'automation_user_name' | password_hash('sha512') }}"
+ #   update_password: on_create
     group: automation
