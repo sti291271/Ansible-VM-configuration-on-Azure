@@ -4,4 +4,4 @@
   authorized_key:
     user: "{{ automation_user }}"
     key: "{{ lookup('file', '/home/' + lookup('env', 'ansible') + '/.ssh/id_rsa.pub') }}"
-  when: "{{ automation }}" != "true"
+  when: automation == false
