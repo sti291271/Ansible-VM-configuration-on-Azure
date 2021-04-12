@@ -10,3 +10,4 @@ target_vm:
     vmcloud1: mytargetvm
   vars:
     ansible_user: ansible
+    automation: false
