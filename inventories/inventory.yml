@@ -1,0 +1,6 @@
+---
+target_vm:
+  hosts:
+    vmcloud1: mytargetvm
+  vars:
+    ansible_user: ansible
