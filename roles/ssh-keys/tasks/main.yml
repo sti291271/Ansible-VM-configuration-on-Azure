@@ -3,4 +3,4 @@
 - name: Copy ssh key to target VM
   authorized_key:
     user: "{{ automation_user }}"
-    key: "{{ lookup('file', '/home/' + lookup('env', 'USER') + '/.ssh/id_rsa.pub') }}"
+    key: "{{ lookup('file', '/home/' + lookup('env', 'ansible') + '/.ssh/id_rsa.pub') }}"
