@@ -1,4 +1,10 @@
 ---
+config_vm:
+  hosts:
+    vmcloud2: myansiblevm
+  vars:
+    automation: true
+  
 target_vm:
   hosts:
     vmcloud1: mytargetvm
