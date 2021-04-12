@@ -6,10 +6,6 @@
     name: automation
     state: present
     
-- name: Print the content of a variable
-  debug:
-    var: automation_user_name
-    
 - name: Add ansible User
   user:
     name: "{{ automation_user }}"
