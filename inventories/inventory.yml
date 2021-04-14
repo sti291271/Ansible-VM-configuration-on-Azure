@@ -1,7 +1,8 @@
+---
 all:
   hosts:
     ansible-vm.westeurope.cloudapp.azure.com:
   children:
-    config_vm:
+    target_vm:
       hosts:
         target-vm.westeurope.cloudapp.azure.com:
