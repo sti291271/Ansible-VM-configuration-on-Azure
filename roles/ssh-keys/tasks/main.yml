@@ -2,7 +2,7 @@
 # Generate and copy ssh key of ansible user to all inventory targets
 
 - name: Deploy SSH Key
-    authorized_key: 
-      user: ansible
-      key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
-      state: present
+  authorized_key: 
+    user: ansible
+    key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
+    state: present
