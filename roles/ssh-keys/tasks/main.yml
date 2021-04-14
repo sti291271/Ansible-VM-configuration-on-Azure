@@ -6,3 +6,4 @@
     user: ansible
     key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
     state: present
+  delegate_to: target_vm
