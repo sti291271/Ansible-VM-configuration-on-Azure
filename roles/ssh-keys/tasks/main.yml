@@ -1,6 +1,8 @@
 ---
 # Generate and copy ssh key of ansible user to all inventory targets
-- name: Copy ssh key to target VM
-  authorized_key:
-    user: "{{ automation_user_name }}"
-    key: "{{ lookup('file', '/home/' + lookup('env', 'USER') + '/.ssh/id_rsa.pub') }}"
+
+- name: Deploy SSH Key
+    authorized_key: 
+      user: ansible
+      key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
+      state: present
