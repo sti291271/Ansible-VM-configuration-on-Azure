@@ -2,6 +2,8 @@
 all:
   hosts:
     ansible-vm.westeurope.cloudapp.azure.com:
+  vars:
+    automation_vm: true
   children:
     target_vm:
       hosts:
