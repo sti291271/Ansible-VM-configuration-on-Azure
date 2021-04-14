@@ -19,3 +19,10 @@
   copy:
     dest: "/etc/sudoers.d/ansible"
     content: "ansible  ALL=(ALL)  NOPASSWD: ALL"
+    
+- name: Copy ansible config template
+  template:
+    src: /template/ansible-cfg.j2
+    dest: /etc/ansible/ansible.cfg
+    backup: true
+  when: "{{ automation_vm }}" == "true"
