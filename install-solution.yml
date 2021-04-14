@@ -10,7 +10,7 @@
     
     
 - name: Manage credentials for Automation
-  hosts: all
+  hosts: localhost #all
   become: true
   become_user: ansible
   vars_files: 
