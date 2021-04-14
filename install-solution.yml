@@ -11,7 +11,7 @@
     
 - name: Manage credentials for Automation
   hosts: localhost #all
-  become: true
+ # become: true
   become_user: ansible
   vars_files: 
     - ./vars/main.yml
