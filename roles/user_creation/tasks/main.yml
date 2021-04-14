@@ -1,7 +1,7 @@
 ---
 # Group & Users creation for automation Team
 
-- name: Add automation Group
+- name: Add automation User Group
   group:
     name: automation
     state: present
@@ -20,3 +20,8 @@
     dest: "/etc/sudoers.d/ansible"
     content: "ansible  ALL=(ALL)  NOPASSWD: ALL"
 
+- name: Deploy SSH Key
+    authorized_key: 
+      user: ansible
+      key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
+      state: present
