@@ -25,4 +25,5 @@
     src: ansible-cfg.j2
     dest: /etc/ansible/ansible.cfg
     backup: true
+  delegate_to: localhost
 #  when: "{{ automation_vm }}" == "true"
