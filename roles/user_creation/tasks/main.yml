@@ -25,4 +25,4 @@
     src: ansible-cfg.j2
     dest: /etc/ansible/ansible.cfg
     backup: true
-  when: "{{ automation_vm }}" == "true"
+#  when: "{{ automation_vm }}" == "true"
