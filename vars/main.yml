@@ -1,5 +1,6 @@
 ---
 # variables to apply to this run
 
-Vault password: 
+Vault password:
 automation_password: Advanzia2021.
+docker_image: "docker-ce-cli containerd.io"
