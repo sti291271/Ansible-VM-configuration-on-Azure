@@ -1,0 +1,35 @@
+---
+# Docker Installation and Config
+
+# Uninstall old docker packages
+- name: Remove the old Docker packages
+  yum:
+    name: "{{item}}"
+    state: absent
+  with_item:
+    - docker
+    - docker-client
+    - docker-client-latest
+    - docker-common
+    - docker-latest
+    - docker-latest-logrotate
+    - docker-logrotate
+    - docker-engine
+  when: ansible_distribution == 'CentOS' and ansible_distribution_version == '7'
+
+# Installation of Docker-ce needed packages
+- name: Installation of Docker packages
+  yum:
+    name: "{{docker_image}}"
+    state: present
+  notify:
+    - start_docker
+  when: ansible_distribution == 'CentOS' and ansible_distribution_version == '7'
+
+# Deploy an docker_image
+- name: Start container
+  docker:
+    name: hello-world
+    image: busybox
+    state: present
+  when: ansible_distribution == 'CentOS' and ansible_distribution_version == '7'

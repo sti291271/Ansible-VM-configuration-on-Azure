@@ -1,0 +1,8 @@
+---
+# Handlers executions for this roles
+
+- name: start_docker
+  ansible.builtin.systemd:
+    name: docker
+    state: started
+    enabled: yes
