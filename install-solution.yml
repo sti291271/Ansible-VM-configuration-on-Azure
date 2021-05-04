@@ -1,6 +1,6 @@
 ---
 - name: Manage credentials for Automation
-  hosts: all
+  hosts: localhost
   become: true
   vars_files: 
     - ./vars/main.yml
