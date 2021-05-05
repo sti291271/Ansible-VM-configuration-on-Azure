@@ -23,7 +23,6 @@
       - docker-ce
       - docker-ce-cli
       - containerd.io
-      -
     state: present
   notify:
     - start_docker
