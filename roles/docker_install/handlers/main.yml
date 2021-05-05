@@ -1,8 +1,10 @@
 ---
 # Handlers executions for this roles
 
-- name: start_docker
-  ansible.builtin.systemd:
-    name: docker
-    state: started
-    enabled: yes
+# Deploy a docker_image
+- name: start_container
+  docker_container:
+    name: hello-world
+    image: hello-world
+    state: present
+#  when: ansible_distribution == 'CentOS' and ansible_distribution_version == '7'
