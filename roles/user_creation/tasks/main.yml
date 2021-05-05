@@ -20,8 +20,8 @@
     dest: "/etc/sudoers.d/ansible"
     content: "ansible  ALL=(ALL)  NOPASSWD: ALL"
 
-- name: Generate an OpenSSH keypair with the default values (4096 bits, rsa)
-  openssh_keypair:
-    path: /home/"{{ automation_user }}"/.ssh/id_rsa
-    owner: "{{ automation_user }}"
-    group: "{{ automation_user }}"
+#- name: Generate an OpenSSH keypair with the default values (4096 bits, rsa)
+#  openssh_keypair:
+#    path: /home/"{{ automation_user }}"/.ssh/id_rsa
+#    owner: "{{ automation_user }}"
+#    group: "{{ automation_user }}"
